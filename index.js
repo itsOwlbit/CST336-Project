@@ -117,7 +117,7 @@ app.post('/profile', async (req, res) => {
               where user_id = ?`
 
   await executeSQL(sql, params)
-  res.render('login', { 'ID': 0 })
+  res.render('profile', {'ID': u.userId})
 });
 
 
