@@ -3,8 +3,9 @@ var userId = localStorage.getItem('userId')
 var greeting = ''
 
 //just use async function for all of this
-popStates()
 
+
+popStates()
 
 
 async function getUserData() {
@@ -27,15 +28,16 @@ async function getUserData() {
     console.log(user)//<<<----Printing to console for you to see contents
     //~_~_~_~_~_~_~_~_~_~_~_~_~_~_~_~_~_~_~_~_~_~_~
     let details = [user.username, user.password, user.first_name, user.last_name, user.address, user.city, user.state, user.zip, userId]
-    console.log(details)
+
     let userInfo = document.getElementById('updateProfile')
-    console.log(userInfo[0])
+
     for (let i = 0; i < userInfo.length - 1; i++) {
       userInfo[i].value = details[i]
     }
     greeting = `Welcome ${user.username}`
   } else {
     greeting = "User Not Logged In!"
+    document.querySelector('#updateProfile').style.visibility = 'hidden'
   }
 
   document.querySelector('#greeting').innerHTML = `<h1> ${greeting} </h1>`
@@ -43,20 +45,22 @@ async function getUserData() {
 
 //fill the states dropdown
 async function popStates() {
-  let states = document.querySelector('#state');
+  if (userId > 0) {
+    let states = document.querySelector('#state');
 
-  // do the select one
-  states.innerHTML = `<option>Select One</option>`;
+    // do the select one
+    states.innerHTML = `<option>Select One</option>`;
 
-  let url = 'https://cst336.herokuapp.com/projects/api/state_abbrAPI.php';
-  let data = await fetch(url)
-    .then((response) => response.json())
+    let url = 'https://cst336.herokuapp.com/projects/api/state_abbrAPI.php';
+    let data = await fetch(url)
+      .then((response) => response.json())
 
-  for (const state in data) {
-    //append data 
-    let usps = data[state]['usps'];
-    let name = data[state]['state'];
-    states.innerHTML += `<option value="${usps}">${name}</option>`
+    for (const state in data) {
+      //append data 
+      let usps = data[state]['usps'];
+      let name = data[state]['state'];
+      states.innerHTML += `<option value="${usps}">${name}</option>`
+    }
   }
   getUserData()
 }

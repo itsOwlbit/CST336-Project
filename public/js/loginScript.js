@@ -1,5 +1,5 @@
 //if user ID is greater than 0 its valid login set the local storage variable to user ID
-console.log(`user id: ${userId}`)
+
 if (userId > 0) {
   localStorage.setItem('userId', userId)
 } else if (userId < 0) { //if its negative we had failed login

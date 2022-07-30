@@ -24,7 +24,7 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/profile', (req, res) => {
-  res.render('profile', { 'userID': 0 })
+  res.render('profile', { 'ID': 0 })
 });
 
 app.get('/signup', (req, res) => {
