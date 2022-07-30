@@ -1,0 +1,16 @@
+<%- include('partials/header.ejs') %> 
+<script>
+  var userId = <%- ID %>;
+</script>
+  <h1>LOGIN</h1>
+<div id = loginWarning></div>
+<form method="POST" action="/login" id='login'>
+  <label for="username"> User: </label><br>
+  <input type = 'text' name='username'><br>
+   <label for="password"> Password: </label><br>
+  <input type ='password'name='password'><br>
+  <input type= 'submit' value = 'Log in'>
+</form>
+<script src = "/js/loginScript.js" type = "text/javascript"/></script>
+
+<%- include('partials/footer.ejs') %> 

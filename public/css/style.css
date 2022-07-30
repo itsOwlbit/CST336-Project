@@ -1,0 +1,62 @@
+body{
+  background:#3cbebe;
+}
+h1{
+  text-align:center;
+  font-family: 'Koulen', cursive;
+font-family: 'Raleway', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Turret Road', cursive;
+font-family: 'VT323', monospace;
+}
+footer{
+  position: fixed;
+  bottom:0px;
+  height:130px;
+  margin-top:50px;
+  width: 100%;
+ font-family: sans-serif;
+  color:#fafafa;
+  text-transform: uppercase;
+  background-color: rgba(255,255,255,0.3);  
+ }
+
+.footer-content{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+.footer-content p{
+  max-width: 500px;
+  line-height: 20px;
+  font-size:15px;
+  color: black;
+}
+
+.footer-bottom{
+  text-align: center;
+}
+.footer-bottom p{
+  font-size: 15px;
+  word-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #000000;
+}
+
+.footer-bottom span{
+  text-transform: uppercase;
+  font-weight: 200;
+}
+ #logo {
+ width: 50px;
+ padding: 5px 5px;
+}
+
+ #otterbot {
+ width: 50px;
+ padding: 5px 5px;
+}

@@ -1,0 +1,40 @@
+<%- include('partials/header.ejs') %> 
+
+  <h1>SUBSCRIPTIONS</h1>
+
+
+
+  
+<!-- Juli did stuff below this line for creating package modal -->
+<!-- uses the subscription.js file.  Add to it for more js for this page -->
+  <!--Delete the links after you queried the package onto the page -->
+  <!-- Make sure links have id=package_id and a class="package-link" -->
+  <a href="#" id="1" class="package-link">Package 1 Test</a>
+  <a href="#" id="2" class="package-link">Package 2 Test</a>
+  <a href="#" id="3" class="package-link">Package 3 Test</a>
+  <a href="#" id="4" class="package-link">Package 4 Test</a>
+  <!-- Delete links above when ready.  Used for testing only. -->
+
+
+  
+  <!-- Package Modal (do not delete below this point) -->
+  <div id="packageModal" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modalTitle"></h3>
+        </div>
+        <div class="modal-body">
+          <div id="packageInfo"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUGGESTION: Add feature "ADD TO CART" from inside modal -->
+  
+<script src="/js/subscription.js"></script>
+<%- include('partials/footer.ejs') %> 

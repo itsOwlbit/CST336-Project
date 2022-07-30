@@ -1,0 +1,46 @@
+<%- include('partials/header.ejs') %> 
+
+  <h1>SIGNUP</h1>
+<form method="POST" action="/signup" id='signup'>
+  <label for="username"> User: </label><br>
+  <input type = 'text' name='username'><br>
+  
+  <label for="password"> Password: </label><br>
+  <input type ='password'name='password'><br>
+
+  <label for="firstname"> First Name: </label><br>
+  <input type = 'text' name='firstname'><br>
+
+  <label for="lastname"> Last Name: </label><br>
+  <input type = 'text' name='lastname'><br>
+  
+  <label for="address"> Address: </label><br>
+  <input type = 'text' name='address'><br>
+
+  <label for="city"> City: </label><br>
+  <input type = 'text' name='city'><br>
+
+  <label for="state"> State: </label><br>
+  <select id="state" name="state">
+  </select> <br>
+
+  <label for="zip"> Zip: </label><br>
+  <input type = 'text' name='zip'><br>
+
+  <input type= 'submit' value = 'JOIN!'>
+</form>
+
+<script src = "/js/signupScript.js" type = "text/javascript"/></script>
+<%- include('partials/footer.ejs') %> 
+
+  <!--
+address: null
+city: null
+first_name: null
+last_name: null
+password: "olive"
+state: null
+user_access: 1
+user_id: 1
+username: "olive"
+zip: null -->

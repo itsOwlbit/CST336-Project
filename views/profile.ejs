@@ -1,0 +1,36 @@
+<%- include('partials/header.ejs') %> 
+
+  <h1>PROFILE</h1>
+  <div id = greeting></div>
+
+  <form method="POST" action="/profile" id='updateProfile'>
+  <label for="username"> User: </label><br>
+  <input type = 'text' name='username'><br>
+  
+  <label for="password"> Password: </label><br>
+  <input type ='password'name='password'><br>
+
+  <label for="firstname"> First Name: </label><br>
+  <input type = 'text' name='firstname'><br>
+
+  <label for="lastname"> Last Name: </label><br>
+  <input type = 'text' name='lastname'><br>
+  
+  <label for="address"> Address: </label><br>
+  <input type = 'text' name='address'><br>
+
+  <label for="city"> City: </label><br>
+  <input type = 'text' name='city'><br>
+
+  <label for="state"> State: </label><br>
+  <select id="state" name="state">
+  </select> <br>
+
+  <label for="zip"> Zip: </label><br>
+  <input type = 'text' name='zip'><br>
+  <input type="hidden" name="userId" value='-1'>
+  <input type= 'submit' value = 'Update!'>
+</form>
+  
+<script src = "/js/profileScript.js" type = "text/javascript"/></script>
+<%- include('partials/footer.ejs') %> 
