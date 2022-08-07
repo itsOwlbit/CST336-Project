@@ -2,15 +2,46 @@
 <script>
   var userId = <%- ID %>;
 </script>
-  <h1>LOGIN</h1>
-<div id = loginWarning></div>
-<form method="POST" action="/login" id='login'>
+
+  <%- ID %>
+  <h1>Log-in</h1>
+   <% if (typeof message != "undefined"){ %>
+  		   <h3><%=message%></h3>
+   <% } %>
+<div id="loginWarning"></div>
+
+  <div class="container signup-container">
+    <form method="POST" action="/login" id='login'>
+      <div class="form-group row mb-2">
+        <label for="username" class="col-sm-3 col-form-label font-bolded"> User: </label>
+        <div class="col-sm-9">
+          <input class="form-control" type='text' name='username'>
+        </div>
+      </div>
+      <div class="form-group row mb-2">
+        <label for="password" class="col-sm-3 col-form-label font-bolded"> Password: </label>
+        <div class="col-sm-9">
+          <input class="form-control" type='password' name='password'>
+        </div>
+      </div>
+      <input class="form-control w-50 mt-4 input-center bg-primary text-white" type='submit' value='Log in'>
+    </form>
+    <br><hr><br>
+    <div class="row text-center input-center">
+      <a href="/signup"><button class="btn btn-secondary w-50"> Sign-up </button></a>
+    </div>
+  </div>
+  <br><br>
+
+     
+<!-- <form method="POST" action="/login" id='login'>
   <label for="username"> User: </label><br>
-  <input type = 'text' name='username'><br>
+  <input type='text' name='username'><br>
    <label for="password"> Password: </label><br>
-  <input type ='password'name='password'><br>
-  <input type= 'submit' value = 'Log in'>
-</form>
+  <input type='password' name='password'><br>
+  <input type='submit' value='Log in'>
+</form> -->
+     
 <script src = "/js/loginScript.js" type = "text/javascript"/></script>
 
 <%- include('partials/footer.ejs') %> 

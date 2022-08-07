@@ -3,10 +3,11 @@ var userId = localStorage.getItem('userId')
 var greeting = ''
 
 //just use async function for all of this
-
+testFunk()
 
 popStates()
 
+getSubs()
 
 async function getUserData() {
   if (userId > 0) {
@@ -14,6 +15,7 @@ async function getUserData() {
     //## This is the example for post endpoint #
     //##########################################
     //this uses the userId from local storage to return the user object which is all the user data from the otter_users table
+
     let url = '/getUserData'
     let payload = { 'userId': userId }
     let response = await fetch(url, {
@@ -40,12 +42,13 @@ async function getUserData() {
     document.querySelector('#updateProfile').style.visibility = 'hidden'
   }
 
-  document.querySelector('#greeting').innerHTML = `<h1> ${greeting} </h1>`
+  document.querySelector('#greeting').innerHTML = `<h3> ${greeting}! </h3>`
 }
 
 //fill the states dropdown
 async function popStates() {
   if (userId > 0) {
+    document.querySelector('#greeting').innerHTML = `<h3> Loading..... </h3>`
     let states = document.querySelector('#state');
 
     // do the select one
@@ -63,4 +66,37 @@ async function popStates() {
     }
   }
   getUserData()
+}
+
+
+// $$$$$$$$$$$$$$$$$
+// $$$$ FOR KEV $$$$
+// $$$$$$$$$$$$$$$$$
+async function testFunk() {
+  let testUrl = `https://otterbotbakesale.andrewshiraki.repl.co/subs/?userId=${userId}`
+  let response = await fetch(testUrl)
+  let data = await response.json()
+  console.log(data)
+}
+
+async function getSubs() {
+  let testUrl = `https://otterbotbakesale.andrewshiraki.repl.co/subs/?userId=${userId}`
+  let response = await fetch(testUrl)
+  let data = await response.json()
+  console.log(data)
+  let subs = document.querySelector("#user_subs")
+  if (data.length > 0) {
+    for (let i = 0; i < data.length; i++) {
+      subs.innerHTML += `
+  <span>
+  <a class="sillyLink" href='/delSub/?subId=${data[i].subscription_id}'>
+  <img src='/img/minus.png'>
+  </a>
+  ${data[i].name}
+  </span>`
+    }
+  } else {
+    subs.innerHTML = '<h3> No Subscriptions Found</h3>'
+  }
+
 }

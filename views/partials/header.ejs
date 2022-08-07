@@ -2,21 +2,53 @@
 <html>
 <head>
 <title>Otterbots</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/style.css" />
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Koulen&family=Luckiest+Guy&family=Raleway:wght@300&family=Source+Sans+Pro:wght@300&family=Turret+Road:wght@200;800&family=VT323&display=swap');
+</style>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <nav>
-    <a href='/'>HOME</a>
-    <a href='/signup'>SIGNUP</a>
-    <a href='/login'>LOGIN</a>
-    <a href='/profile'>PROFILE</a>
-    <a href='/subscriptions'>SUBSCRIPTIONS</a>
-    <a href='/order'>ORDER ONLINE</a>
-    <a href='/admin'>ADMIN</a>
-    <a href='/logout'>LOGOUT</a>
-  </nav>
+
+  <div class="navbar navbar-expand-md">
+    <div class="container-fluid">
+      <a class="navbar-brand mt-2" href="/">
+        <img class="cookie-logo" src='/img/cookielogo.png' alt='logo'>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-start" id="navbarText">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link nav-text" href='/'>HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-text" href='/subscriptions'>SUBSCRIPTIONS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-text" href='/about'>ABOUT US</a>
+
+            
+          </li>
+        </ul>
+      </div>
+  
+        <span class="navbar-text menu-icons justify-content-end">
+          <a href='/login'><img class="nav-icon" src="/img/bx-user.svg"></a>
+          <a href='/order'><img class="nav-icon" src="/img/bx-cart.svg"></a>
+          <a href='/admin'><img class="nav-icon hide-icon" src="/img/bx-key.svg"></a>
+        </span>
+    </div>
+  </div>
+
+
+
+  

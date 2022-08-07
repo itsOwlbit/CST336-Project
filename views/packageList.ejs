@@ -1,0 +1,13 @@
+
+<%- include('partials/header.ejs') %> 
+<h3> Edit Packages</h3>
+ 
+ <% for (i=0; i < packages.length; i++) { %>
+ 
+   <a href="/packages/edit?package_id=<%=packages[i].package_id%>">UPDATE PACKAGES</a>
+ 
+   <%=packages[i].name%><br>
+  
+ <% } %>
+
+   <%- include('partials/footer.ejs') %> 

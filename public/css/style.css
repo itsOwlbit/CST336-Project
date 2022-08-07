@@ -1,62 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=BhuTuka+Expanded+One&family=Koulen&family=Luckiest+Guy&family=Raleway:wght@300&family=Source+Sans+Pro:wght@300&family=Turret+Road:wght@200;800&family=VT323&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=BhuTuka+Expanded+One&family=Comic+Neue:wght@300&family=Koulen&family=Luckiest+Guy&family=Raleway:wght@300&family=Source+Sans+Pro:wght@300&family=Turret+Road:wght@200;800&family=VT323&display=swap');
+
 body{
-  background:#3cbebe;
-}
-h1{
-  text-align:center;
-  font-family: 'Koulen', cursive;
-font-family: 'Raleway', sans-serif;
-font-family: 'Source Sans Pro', sans-serif;
-font-family: 'Turret Road', cursive;
-font-family: 'VT323', monospace;
-}
-footer{
-  position: fixed;
-  bottom:0px;
-  height:130px;
-  margin-top:50px;
-  width: 100%;
- font-family: sans-serif;
-  color:#fafafa;
-  text-transform: uppercase;
-  background-color: rgba(255,255,255,0.3);  
- }
-
-.footer-content{
-    display:flex;
-    align-items: center;
-    justify-content:center;
-    flex-direction: column;
-    text-align: center;
-  }
-
-.footer-content p{
-  max-width: 500px;
-  line-height: 20px;
-  font-size:15px;
-  color: black;
+  background:#fbefef;
+  
 }
 
-.footer-bottom{
+h1, h3 {
   text-align: center;
 }
-.footer-bottom p{
-  font-size: 15px;
-  word-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: normal;
-  color: #000000;
+
+.form-control:focus {
+  border-color: #d39c9c;
 }
 
-.footer-bottom span{
-  text-transform: uppercase;
-  font-weight: 200;
+.logout {
+  font-family: 'Comic Neue', cursive;
+  font-size:20px;
+  display:block;
+  text-decoration:none;
+  color: #d39c9c;
+  margin-bottom:10px;
 }
+
+.logout:hover {
+  color: #d87356;
+}
+
+/* juli used these for form elements */
+label.font-bolded, input.font-bolded {
+  font-weight: bold;
+}
+
+.home{
+font-family: 'Comic Neue', cursive;
+  color:#6b5a52;
+  font-size: 25px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about{
+  font-family: 'Comic Neue', cursive;
+  color:#6b5a52;
+  font-size: 25px;
+}
+/* header styles */
+.navbar {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.cookie-logo {
+  float:left;
+  height: auto;
+  padding-left:5%;
+  padding-top:2%;
+  width: 300px;
+}
+.homeh1{
+  font-size:45px;
+  float:left;
+  font-family: 'Luckiest Guy', cursive;
+  text-decoration:none;
+  transition: all 0.3s;
+  color:#6b5a52;
+  text-align:center;  
+}
+.homep{
+  font-size: 30px;
+  text-align: center;
+}
+
+
+.homebtn{
+  background-color: #d39c9c; 
+  border: none;
+  color: white;
+  padding: 15px 30px 5px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 12px;
+  font-family: 'Luckiest Guy', cursive;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.homebtn:hover{opacity:1}
+
+h1 {
+  font-size:45px;
+  font-family: 'Luckiest Guy', cursive;
+  text-decoration:none;
+  transition: all 0.3s;
+  color:#6b5a52;
+}
+h3{
+  font-size:20px;
+  font-family: 'Luckiest Guy', cursive;
+  text-decoration:none;
+  transition: all 0.3s;
+  color:#6b5a52;
+}
+.nav-text {
+  font-size:25px;
+  font-family: 'Luckiest Guy', cursive;
+  padding: 8px 5px 0 5px;
+  text-decoration:none;
+  transition: all 0.3s;
+  color:#6b5a52;
+}
+
+.nav-text:hover {
+  background: #dfbebe;
+  border-radius: 15px;
+  color:#6b5a52;
+}
+
+.menu-icons {
+  text-align: right;
+}
+
+.nav-icon {
+  width: 50px;
+  height: auto;
+  padding: 10px;
+  margin-right: 5px;
+}
+
+.nav-icon:hover {
+  background: #dfbebe;
+  border-radius: 50%;
+  color:#6b5a52;
+  opacity: 1;
+}
+
+.hide-icon {
+  opacity: 0.2;
+}
+
+/* signup styles */
+.signup-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.input-center {
+  margin: 0 auto;
+}
+
+/* order styles */
+.order-container {
+  max-width: 1000px;
+}
+
+#message {
+  color: #d87356;
+  text-align: center;
+}
+
+#card-alert {
+  color: #d87356;
+}
+
+.input-order {
+  margin: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.input-order-radio {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.order-btn {
+  background-color: #d39c9c; 
+  border: none;
+  color: white;
+  padding: 15px 30px 5px 30px;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 12px;
+  font-family: 'Luckiest Guy', cursive;
+  opacity: 0.6;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background-color: #d39c9c; 
+  color: white;
+  opacity: 1;
+}
+
+/* profile styles */
+
+.input-btn {
+  background-color: #d39c9c; 
+  border: none;
+  color: white;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 12px;
+  font-family: 'Luckiest Guy', cursive;
+  opacity: 0.6;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.input-btn:hover {
+  opacity: 1;
+}
+
+/* footer styles */
+footer{
+  background: #e8cdcc;
+  font-family: 'Comic Neue', cursive;
+  text-align:center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin-top: 30px;
+  font-size: 14px;
+  color:#444444;
+}
+
+.footer-row {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
  #logo {
- width: 50px;
- padding: 5px 5px;
+  width: 100px;
+  padding: 5px 5px;
 }
 
  #otterbot {
- width: 50px;
- padding: 5px 5px;
+  width: 100px;
+  padding: 5px 5px;
+  mix-blend-mode: multiply;
+}
+
+.info{
+  margin-top:150px;
+  width: 100%;
+  padding: 100px 15%;
+  background:#e9cdcd;
+  display:flex;
+}
+
+.info div{
+  text-align:center;
+}
+
+/* .col-2{
+  flex-grow:2;
+} */
+
+.info div h3{
+  font-family: 'Luckiest Guy', cursive;
+  color: white;
+}
+
+.footer-links a {
+  font-family: 'Comic Neue', cursive;
+  font-size:20px;
+  display:block;
+  text-decoration:none;
+  color: white;
+  margin-bottom:10px;
+}
+
+/* .col-3 a{
+  font-family: 'Comic Neue', cursive;
+ font-size:20px;
+  display:block;
+  text-decoration:none;
+  color: white;
+  margin-bottom:10px;
+} */
+
+form input{
+  width: 300px;
+  height: 45px;
+  border-radius: 4px;
+  outline:none;
+  border:none;
+}
+
+.newsletter-btn {
+   background-color: #d39c9c; 
+  border: none;
+  color: white;
+  padding: 15px 30px 5px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 12px;
+  font-family: 'Luckiest Guy', cursive;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 20px;
+  text-align:center;
+  text-decoration: none;
+  border-radius: none;
+  color:#6b5a52;
+}
+
+
+
+.sillyLink{
+  text-decoration: none;
+}
+
+#scooby_snacks{
+  background: #f6f5f4;
+  border: solid brown 2pt;
+  border-radius: 15pt;
+  padding: 10pt 10pt 10pt 10pt;
+  max-width: 500px
+}
+
+.centering_box{
+  display: flex;
+justify-content: center;
+  
+}
+
+.newsletter-input {
+  padding-left: 10px;
 }

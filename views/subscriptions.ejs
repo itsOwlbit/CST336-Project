@@ -1,6 +1,6 @@
 <%- include('partials/header.ejs') %> 
 
-  <h1>SUBSCRIPTIONS</h1>
+  <h1>Cookie Subscriptions</h1>
 
 
 
@@ -8,7 +8,7 @@
 <!-- Juli did stuff below this line for creating package modal -->
 <!-- uses the subscription.js file.  Add to it for more js for this page -->
   <!--Delete the links after you queried the package onto the page -->
-  <!-- Make sure links have id=package_id and a class="package-link" -->
+  <!-- Make sure links have id=package_id" and a class="package-link" --
   <a href="#" id="1" class="package-link">Package 1 Test</a>
   <a href="#" id="2" class="package-link">Package 2 Test</a>
   <a href="#" id="3" class="package-link">Package 3 Test</a>
@@ -16,6 +16,24 @@
   <!-- Delete links above when ready.  Used for testing only. -->
 
 
+<div class="card" style="width: 18rem;">
+  <img src="/img/chocochip.jpg">
+  <div class="card-body">
+    <h5 class="card-title">The Chocolate Chip Lover</h5>
+    <p class="card-text">Two dozen delicious chocolate chip cookies.</p>
+    <a href="#" class="btn btn-primary">Add To Cart</a>
+  </div>
+</div>
+
+
+  <div class="card" style="width: 18rem;">
+  <img src="/img/chocolatefudge.jpg">
+  <div class="card-body">
+    <h5 class="card-title">The Chocolate Fudge </h5>
+    <p class="card-text">Two dozen delicious chocolate Fudge.</p>
+    <a href="#" class="btn btn-primary">Add To Cart</a>
+  </div>
+</div>
   
   <!-- Package Modal (do not delete below this point) -->
   <div id="packageModal" class="modal" tabindex="-1">
@@ -28,11 +46,15 @@
           <div id="packageInfo"></div>
         </div>
         <div class="modal-footer">
+          <form action="...">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </form>
         </div>
       </div>
     </div>
   </div>
+
+  
 
   <!-- SUGGESTION: Add feature "ADD TO CART" from inside modal -->
   
