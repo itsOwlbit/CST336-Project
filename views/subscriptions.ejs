@@ -1,62 +1,24 @@
 <%- include('partials/header.ejs') %> 
 
   <h1>Cookie Subscriptions</h1>
-
-
-
+<div class="row subscription-row">
   
-<!-- Juli did stuff below this line for creating package modal -->
-<!-- uses the subscription.js file.  Add to it for more js for this page -->
-  <!--Delete the links after you queried the package onto the page -->
-  <!-- Make sure links have id=package_id" and a class="package-link" --
-  <a href="#" id="1" class="package-link">Package 1 Test</a>
-  <a href="#" id="2" class="package-link">Package 2 Test</a>
-  <a href="#" id="3" class="package-link">Package 3 Test</a>
-  <a href="#" id="4" class="package-link">Package 4 Test</a>
-  <!-- Delete links above when ready.  Used for testing only. -->
-
-
-<div class="card" style="width: 18rem;">
-  <img src="/img/chocochip.jpg">
-  <div class="card-body">
-    <h5 class="card-title">The Chocolate Chip Lover</h5>
-    <p class="card-text">Two dozen delicious chocolate chip cookies.</p>
-    <a href="#" class="btn btn-primary">Add To Cart</a>
-  </div>
-</div>
-
-
-  <div class="card" style="width: 18rem;">
-  <img src="/img/chocolatefudge.jpg">
-  <div class="card-body">
-    <h5 class="card-title">The Chocolate Fudge </h5>
-    <p class="card-text">Two dozen delicious chocolate Fudge.</p>
-    <a href="#" class="btn btn-primary">Add To Cart</a>
-  </div>
-</div>
-  
-  <!-- Package Modal (do not delete below this point) -->
-  <div id="packageModal" class="modal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 id="modalTitle"></h3>
-        </div>
-        <div class="modal-body">
-          <div id="packageInfo"></div>
-        </div>
-        <div class="modal-footer">
-          <form action="...">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </form>
-        </div>
-      </div>
+<% for (i=0; i < packages.length; i++) { %>
+    
+  <div class="card" style="width: 19rem;">
+    <img class="packageImg" src=" <%=packages[i].picture_url%>"/>
+    <div class="card-body">
+      <h5 class="card-title"><strong><%=packages[i].name%></strong></h5>
+      <p class="card-text"><strong>Description: </strong><%=packages[i].description%></p>
+      <p class="card-text"><strong>$<%=packages[i].price%></strong>
+      </p>
+      <a href="/order" class="btn order-btn w-15>">Order Now</a>  
     </div>
   </div>
 
+<% } %>
   
-
-  <!-- SUGGESTION: Add feature "ADD TO CART" from inside modal -->
+</div>
   
 <script src="/js/subscription.js"></script>
 <%- include('partials/footer.ejs') %> 

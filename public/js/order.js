@@ -1,12 +1,16 @@
 // Juli's Work Zone
 
 // temporary variables to test until subscriptions works
-localStorage.setItem('otterCookiePackageId', '2');
+// localStorage.setItem('otterCookiePackageId', '1');
 
 //-------------------------- global variables
 const userId = localStorage.getItem('userId');
 let user = {};
+
 let packageId = localStorage.getItem('otterCookiePackageId');
+if(packageId === null) {
+  packageId = 1;
+}
 
 const shippingCosts = [8.50, 8.70, 26.95];
 
@@ -155,6 +159,7 @@ function submitOrder() {
     document.querySelector('#visaCard').disabled = true;
     document.querySelector('#masterCard').disabled = true;
     packageId = '';
+    localStorage.setItem('otterCookiePackageId', '1');
     return true;
   }
   return false;

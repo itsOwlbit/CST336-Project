@@ -3,13 +3,13 @@
   <h1>Sign-up</h1>
   <br>
   <% if (typeof message != "undefined"){ %>
-  	<h4><%= message %></h4>
+  	<h3><%= message %></h3>
   <% } %>
     <br>
     <div class="container signup-container">
       <form method="POST" action="/signup" id='signup'>
         <div class="form-group row mb-2">
-          <label for="username" class="col-sm-3 col-form-label font-bolded"> User: </label>
+          <label for="username" class="col-sm-3 col-form-label font-bolded"> Username: </label>
           <div class="col-sm-9">
             <input class="form-control" type='text' name='username'>
           </div>
@@ -56,7 +56,7 @@
             <input class="form-control" type='text' name='zip'>
           </div>
         </div>
-        <input class="form-control w-50 mt-4 input-center bg-primary text-white" type='submit' value='JOIN!'>
+        <input class="form-control w-50 mt-4 input-center input-btn" type='submit' value='JOIN!'>
       </form>
     </div>
     <br><br>

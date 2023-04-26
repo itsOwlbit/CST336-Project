@@ -73,14 +73,14 @@ async function popStates() {
 // $$$$ FOR KEV $$$$
 // $$$$$$$$$$$$$$$$$
 async function testFunk() {
-  let testUrl = `https://otterbotbakesale.andrewshiraki.repl.co/subs/?userId=${userId}`
+  let testUrl = `/subs/?userId=${userId}`
   let response = await fetch(testUrl)
   let data = await response.json()
   console.log(data)
 }
 
 async function getSubs() {
-  let testUrl = `https://otterbotbakesale.andrewshiraki.repl.co/subs/?userId=${userId}`
+  let testUrl = `/subs/?userId=${userId}`
   let response = await fetch(testUrl)
   let data = await response.json()
   console.log(data)

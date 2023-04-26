@@ -3,7 +3,7 @@
 if (userId > 0) {
   localStorage.setItem('userId', userId)
 } else if (userId < 0) { //if its negative we had failed login
-  document.querySelector("#loginWarning").innerHTML = '<h2>Invalid Login/PW</h2>'
+  document.querySelector("#loginWarning").innerHTML = '<h2 id="invalid-login">Invalid Username/Password</h2>'
 }
 
 //check the userID

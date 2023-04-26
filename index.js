@@ -42,13 +42,13 @@ app.get('/signup', (req, res) => {
   res.render('signup')
 });
 
-app.get('/subscriptions', (req, res) => {
-  res.render('subscriptions');
+app.get('/subscriptions', async (req, res) => {
+  let sql = 'SELECT * FROM otter_package ';
+  let packageRow = await executeSQL(sql);
+
+  res.render('subscriptions', { 'packages': packageRow });
 });
 
-app.get('/about', (req, res) => {
-  res.render('about');
-});
 app.get('/logout', (req, res) => {
   //remove session variables
   req.session.destroy(function(err) {
@@ -85,7 +85,10 @@ app.post('/login', async (req, res) => {
   user = user[0]
 
   //check for password match
-  if (user.password == password) {
+  if (user == null) {
+    userId = -1;
+
+  } else if (user.password == password) {
     //if password matches, set userId to id of user
     userId = Number(user.user_id)
     //using session to verify admin. Set isAdmin true if its olive :)
@@ -186,6 +189,7 @@ async function executeSQL(sql, params) {
   return new Promise((resolve, reject) => {
     pool.query(sql, params, (err, rows, fields) => {
       if (err) {
+        console.log("the bad thing happened")
         reject(err)
       } else {
         resolve(rows);
@@ -222,8 +226,8 @@ app.get('/admin', async function(req, res) {
 
   //If unlocked variable is set to true then anyone can access the admin page
   //If unlocked variable is set to false then only admin accounts can access admit page
-  let unlocked = true;
-  
+  let unlocked = false;
+
   if (req.session.isAdmin || unlocked) {
 
     let sql = `SELECT package_id, name, price, picture_url, description
@@ -254,17 +258,23 @@ app.get('/pkg_details/:name', async function(req, res) {
 
 
 app.post("/admin", async function(req, res) {
-
   let u = req.body
   let params = [u.price, u.picture_url,
-  u.description, u.package_id]
-  let sql = `UPDATE otter_package
-                set price = ?,                
-               picture_url = ?,
-               description = ?
-             WHERE package_id =  ?`;
+  u.description, u.package_id];
 
-  rows = await executeSQL(sql, params);
+  let sql = `UPDATE otter_package
+            SET price = ?,         
+              picture_url = ?,
+               description = ?
+            WHERE package_id =  ?`;
+
+  let rows = await executeSQL(sql, params);
+
+
+  sql = `SELECT package_id, name, price, picture_url, description
+          FROM otter_package`;
+  rows = await executeSQL(sql);
+
   res.render('admin', { "packages": rows });
 });
 
